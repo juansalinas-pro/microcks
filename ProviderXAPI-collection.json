@@ -163,7 +163,7 @@
               "name": "mock-2",
               "originalRequest": {
                 "url": {
-                  "raw": "http://localhost:8080/flights/provider-cebu/retrieve/70f735676ec46351c6699c4bb767878a",
+                  "raw": "http://localhost:8080/flights/provider-cebu/retrieve/:recordLocator",
                   "protocol": "https",
                   "host": [
                     "localhost"
@@ -173,7 +173,13 @@
                     "flights",
                     "provider-cebu",
                     "retrieve",
-                    "70f735676ec46351c6699c4bb767878a"
+                    ":recordLocator"
+                  ],
+                  "variable": [
+                    {
+                      "key": "recordLocator",
+                      "value": "70f735676ec46351c6699c4bb767878a"
+                    }
                   ]
                 },
                 "method": "GET",
