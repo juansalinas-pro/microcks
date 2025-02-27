@@ -147,9 +147,36 @@
           "response": [
             {
               "name": "mock-1",
+              "originalRequest": {
+                "url": {
+                  "raw": "http://localhost:8080/flights/provider-cebu/retrieve/:recordLocator",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "flights",
+                    "provider-cebu",
+                    "retrieve",
+                    ":recordLocator"
+                  ],
+                  "variable": [
+                    {
+                      "key": "recordLocator",
+                      "value": "ca4836cb-2be2-4528-bef6-e08a617f011c"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                ],
+                "body": {
+                }
+              },
               "status": "OK",
               "code": 200,
-              "body": "{\"id\":\"\",\"pnr\":\"BHFY6E\",\"passengers\":[{\"id\":\"MCFBRFQ-\",\"firstName\":\"Estefanía\",\"lastName\":\"Vera Arroyo\",\"email\":\"email@travelx.io\",\"passengerType\":\"ADULT\",\"birthday\":\"1975-05-22\",\"documents\":[],\"gender\":\"MALE\",\"telephone\":[{\"number\":\"526678810355\"}]}],\"flights\":[{\"id\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"flightNo\":9294,\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-15T13:05:00\",\"arrivalDate\":\"2024-10-15T14:20:00\"}],\"payments\":[],\"itinerary\":{\"id\":\"\",\"providerItineraryId\":\"\",\"segments\":[{\"id\":\"ACAMEX-9294-20241015-Y4\",\"journeyKey\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"legs\":[{\"id\":\"ACAMEX-373-20241029-Y4\",\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-29\",\"departureTime\":\"13:05\",\"arrivalDate\":\"2024-10-29\",\"arrivalTime\":\"14:20\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":373,\"equipmentType\":\"320\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\"},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H15M\",\"seats\":[],\"familyFare\":\"\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"holdBaggageList\":[],\"carryOnList\":[{\"quantity\":1,\"weight\":10,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"personalBagList\":[{\"quantity\":1,\"weight\":6,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"specialBaggageList\":[]},\"extras\":[],\"flightDuration\":\"PT1H15M\",\"priceInfo\":{\"totalFare\":\"810.74\",\"tua\":\"309.28\",\"ancillariesTotal\":\"0.00\"}}],\"priceInfo\":{\"adults\":{\"totalFare\":\"491.03\",\"totalTax\":\"0.00\",\"baseFare\":\"491.03\",\"ptcTotal\":\"1120.02\",\"baseTax\":\"0.00\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"810.74\",\"type\":\"BUNDLE\",\"code\":\"VLIG\"},{\"amount\":\"309.28\",\"type\":\"TUA Nacion\",\"code\":\"VTUA\"}]}],\"currency\":\"MXN\",\"createdAt\":\"2024-10-15T16:07:14.267269600Z\"},\"createdAt\":\"2024-10-15T16:07:14.267309757Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ONE_WAY\",\"isDomestic\":true,\"specialServices\":[]},\"contactInformation\":{\"phoneNumbers\":[{\"number\":\"+526678810355\",\"type\":1}],\"cultureCode\":\"es-MX\",\"emailAddress\":\"email@travelx.io\",\"name\":{\"first\":\"Estefanía\",\"last\":\"Vera Arroyo\"}}}",
+              "body": "{\"id\":\"ca4836cb-2be2-4528-bef6-e08a617f011c\",\"pnr\":\"BHFY6E\",\"passengers\":[{\"id\":\"MCFBRFQ-\",\"firstName\":\"Estefanía\",\"lastName\":\"Vera Arroyo\",\"email\":\"email@travelx.io\",\"passengerType\":\"ADULT\",\"birthday\":\"1975-05-22\",\"documents\":[],\"gender\":\"MALE\",\"telephone\":[{\"number\":\"526678810355\"}]}],\"flights\":[{\"id\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"flightNo\":9294,\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-15T13:05:00\",\"arrivalDate\":\"2024-10-15T14:20:00\"}],\"payments\":[],\"itinerary\":{\"id\":\"\",\"providerItineraryId\":\"\",\"segments\":[{\"id\":\"ACAMEX-9294-20241015-Y4\",\"journeyKey\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"legs\":[{\"id\":\"ACAMEX-373-20241029-Y4\",\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-29\",\"departureTime\":\"13:05\",\"arrivalDate\":\"2024-10-29\",\"arrivalTime\":\"14:20\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":373,\"equipmentType\":\"320\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\"},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H15M\",\"seats\":[],\"familyFare\":\"\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"holdBaggageList\":[],\"carryOnList\":[{\"quantity\":1,\"weight\":10,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"personalBagList\":[{\"quantity\":1,\"weight\":6,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"specialBaggageList\":[]},\"extras\":[],\"flightDuration\":\"PT1H15M\",\"priceInfo\":{\"totalFare\":\"810.74\",\"tua\":\"309.28\",\"ancillariesTotal\":\"0.00\"}}],\"priceInfo\":{\"adults\":{\"totalFare\":\"491.03\",\"totalTax\":\"0.00\",\"baseFare\":\"491.03\",\"ptcTotal\":\"1120.02\",\"baseTax\":\"0.00\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"810.74\",\"type\":\"BUNDLE\",\"code\":\"VLIG\"},{\"amount\":\"309.28\",\"type\":\"TUA Nacion\",\"code\":\"VTUA\"}]}],\"currency\":\"MXN\",\"createdAt\":\"2024-10-15T16:07:14.267269600Z\"},\"createdAt\":\"2024-10-15T16:07:14.267309757Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ONE_WAY\",\"isDomestic\":true,\"specialServices\":[]},\"contactInformation\":{\"phoneNumbers\":[{\"number\":\"+526678810355\",\"type\":1}],\"cultureCode\":\"es-MX\",\"emailAddress\":\"email@travelx.io\",\"name\":{\"first\":\"Estefanía\",\"last\":\"Vera Arroyo\"}}}",
               "header": [
                 {
                   "name": "Content-Type",
