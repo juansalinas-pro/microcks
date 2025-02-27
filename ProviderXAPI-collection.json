@@ -1,0 +1,221 @@
+{
+  "info": {
+    "name": "Provider Cebu API",
+    "_postman_id": "c0bc3513-c83a-8b5d-bbff-1a4a0dc001d7",
+    "description": "version=1.0 - This is a Provider Cebu API description",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Transactions",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:8080/flights/provider-cebu/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "flights",
+                "provider-cebu",
+                "transactions"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"action\":\"ACCEPTANCE\", \"operationId\":\"xyz\", \"recordLocator\":\"12345\", \"transactions\":[{\"type\":\"MOVEMENT\",\"transactionDetail\":[{\"key\":\"value\"}]}]}"
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "response": [
+            {
+              "name": "get-1",
+              "status": "OK",
+              "code": 200,
+              "body": "{\"type\":\"SUCCESS\",\"action\":\"CONTINUE\",\"giftCardCode\":\"MPSADFGHJKLOG1A\",\"status\":\"SUCCESS\"}",
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Itineraries Search",
+      "item": [
+        {
+          "name": "Itineraries Search",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:8080/flights/provider-cebu/itineraries/search",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "flights",
+                "provider-cebu",
+                "itineraries",
+                "search"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"from\":\"NYC\",\"to\":\"LAX\",\"departure\":\"2025-02-01\",\"arrival\":\"2025-02-01\",\"passengers\":{\"adt\":1,\"chd\":0}, \"currency\":\"USD\"}"
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "response": [
+            {
+              "status": "OK",
+              "code": 200,
+              "body": "{\"itineraries\":[{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyOH4gfn5NRVh_MDkvMjgvMjAyNCAwNjowNX5DVU5_MDkvMjgvMjAyNCAwOToyNX5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyOH4gfn5NRVh_MDkvMjgvMjAyNCAwNjowNX5DVU5_MDkvMjgvMjAyNCAwOToyNX5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5JfiB_VkJ_SUxTTzAwTn5WQkxTfn4wfjR_flghMTg-\",\"legs\":[{\"id\":\"MEXCUN-1028-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"09:25\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1028,\"equipmentType\":\"321Y4\",\"cabin\":{\"designator\":\"I\",\"code\":\"Y\",\"availableStock\":1},\"fareBase\":\"ILSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2863.88\",\"totalTax\":\"1263.5199999999998\",\"baseFare\":\"1600.3600000000002\",\"ptcTotal\":\"2863.88\",\"baseTax\":\"1263.52\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"256.06\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAxNn4gfn5NRVh_MDkvMjgvMjAyNCAwNjo0NX5DVU5_MDkvMjgvMjAyNCAxMDowNX5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAxNn4gfn5NRVh_MDkvMjgvMjAyNCAwNjo0NX5DVU5_MDkvMjgvMjAyNCAxMDowNX5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5JfiB_VkJ_SUxTTzAwTn5WQkxTfn4wfjR_flghMTg-\",\"legs\":[{\"id\":\"MEXCUN-1016-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"06:45\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"10:05\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1016,\"equipmentType\":\"321Y4\",\"cabin\":{\"designator\":\"I\",\"code\":\"Y\",\"availableStock\":4},\"fareBase\":\"ILSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2863.88\",\"totalTax\":\"1263.5199999999998\",\"baseFare\":\"1600.3600000000002\",\"ptcTotal\":\"2863.88\",\"baseTax\":\"1263.52\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"256.06\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTM4MH4gfn5NRVh_MDkvMjgvMjAyNCAwODo0MH5DVU5_MDkvMjgvMjAyNCAxMjowMH5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTM4MH4gfn5NRVh_MDkvMjgvMjAyNCAwODo0MH5DVU5_MDkvMjgvMjAyNCAxMjowMH5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5JfiB_VkJ_SUxTTzAwTn5WQkxTfn4wfjR_flghMTg-\",\"legs\":[{\"id\":\"MEXCUN-1380-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"08:40\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"12:00\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1380,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"I\",\"code\":\"Y\",\"availableStock\":2},\"fareBase\":\"ILSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2863.88\",\"totalTax\":\"1263.5199999999998\",\"baseFare\":\"1600.3600000000002\",\"ptcTotal\":\"2863.88\",\"baseTax\":\"1263.52\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"256.06\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyMn4gfn5NRVh_MDkvMjgvMjAyNCAxMDoyNX5DVU5_MDkvMjgvMjAyNCAxMzo0NX5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyMn4gfn5NRVh_MDkvMjgvMjAyNCAxMDoyNX5DVU5_MDkvMjgvMjAyNCAxMzo0NX5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5JfiB_VkJ_SUxTTzAwTn5WQkxTfn4wfjR_flghMTg-\",\"legs\":[{\"id\":\"MEXCUN-1022-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"10:25\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"13:45\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1022,\"equipmentType\":\"321Y4\",\"cabin\":{\"designator\":\"I\",\"code\":\"Y\",\"availableStock\":6},\"fareBase\":\"ILSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2863.88\",\"totalTax\":\"1263.5199999999998\",\"baseFare\":\"1600.3600000000002\",\"ptcTotal\":\"2863.88\",\"baseTax\":\"1263.52\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"256.06\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAzNH4gfn5NRVh_MDkvMjgvMjAyNCAxMjozMH5DVU5_MDkvMjgvMjAyNCAxNTo1MH5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAzNH4gfn5NRVh_MDkvMjgvMjAyNCAxMjozMH5DVU5_MDkvMjgvMjAyNCAxNTo1MH5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5JfiB_VkJ_SUxTTzAwTn5WQkxTfn4wfjR_flghMTg-\",\"legs\":[{\"id\":\"MEXCUN-1034-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"12:30\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"15:50\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1034,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"I\",\"code\":\"Y\",\"availableStock\":4},\"fareBase\":\"ILSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2863.88\",\"totalTax\":\"1263.5199999999998\",\"baseFare\":\"1600.3600000000002\",\"ptcTotal\":\"2863.88\",\"baseTax\":\"1263.52\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"256.06\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyNH4gfn5NRVh_MDkvMjgvMjAyNCAxNzo1MH5DVU5_MDkvMjgvMjAyNCAyMToxMH5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAyNH4gfn5NRVh_MDkvMjgvMjAyNCAxNzo1MH5DVU5_MDkvMjgvMjAyNCAyMToxMH5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjR_flghMTc-\",\"legs\":[{\"id\":\"MEXCUN-1024-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"17:50\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"21:10\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1024,\"equipmentType\":\"321Y45\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2063.87\",\"totalTax\":\"1153.1699999999999\",\"baseFare\":\"910.7000000000001\",\"ptcTotal\":\"2063.87\",\"baseTax\":\"1153.17\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"145.71\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true},{\"id\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAzOH4gfn5NRVh_MDkvMjgvMjAyNCAxOTowMH5DVU5_MDkvMjgvMjAyNCAyMjoyMH5_\",\"providerItineraryId\":\"VkJ_MTM3OX4gfn5DVU5_MDkvMjUvMjAyNCAwNjowNX5NRVh_MDkvMjUvMjAyNCAwNzo0MH5_|VkJ_MTAzOH4gfn5NRVh_MDkvMjgvMjAyNCAxOTowMH5DVU5_MDkvMjgvMjAyNCAyMjoyMH5_\",\"segments\":[{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjN_flghMA--\",\"legs\":[{\"id\":\"CUNMEX-1379-20290925-Y4\",\"origin\":\"CUN\",\"destination\":\"MEX\",\"departureDate\":\"2029-09-25\",\"departureTime\":\"06:05\",\"arrivalDate\":\"2029-09-25\",\"arrivalTime\":\"07:40\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1379,\"equipmentType\":\"320Y42\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":9},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H35M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT1H35M\"},{\"lowestFareKey\":\"MH5BfiB_VkJ_QUxTTzAwTn5WQkxTfn4wfjR_flghMTc-\",\"legs\":[{\"id\":\"MEXCUN-1038-20290928-Y4\",\"origin\":\"MEX\",\"destination\":\"CUN\",\"departureDate\":\"2029-09-28\",\"departureTime\":\"19:00\",\"arrivalDate\":\"2029-09-28\",\"arrivalTime\":\"22:20\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":1038,\"equipmentType\":\"321Y45\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\",\"availableStock\":5},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT3H20M\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"baggage\":{\"quantity\":0,\"weight\":0,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"},\"carryOn\":{\"quantity\":0},\"personalBag\":{\"isIncluded\":true}},\"flightDuration\":\"PT3H20M\"}],\"priceInfo\":{\"adults\":{\"totalFare\":\"2063.87\",\"totalTax\":\"1153.1699999999999\",\"baseFare\":\"910.7000000000001\",\"ptcTotal\":\"2063.87\",\"baseTax\":\"1153.17\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"11.54\",\"type\":\"TermicPass\",\"code\":\"Y4AAY4\"},{\"amount\":\"15.46\",\"type\":\"PaxSecurityCritical\",\"code\":\"Y4AAVE\"},{\"amount\":\"64.57\",\"type\":\"BagScreening\",\"code\":\"Y4AAVF\"},{\"amount\":\"145.71\",\"type\":\"VAT\",\"code\":\"YS\"},{\"amount\":\"915.89\",\"type\":\"MexicoDepartureTax\",\"code\":\"VTUA\"}]},\"currency\":\"MXN\",\"createdAt\":\"2029-06-11T15:44:46.376762987Z\"},\"createdAt\":\"2029-06-11T15:44:46.376762987Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ROUND_TRIP\",\"isDomestic\":true}]}",
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Retrieve Flight",
+      "item": [
+        {
+          "name": "Retrieve Flight",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/flights/provider-cebu/retrieve/{recordLocator}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "flights",
+                "provider-cebu",
+                "retrieve",
+                "{recordLocator}"
+              ],
+              "variable": [
+                {
+                  "key": "recordLocator",
+                  "value": "12345"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "email",
+                "value": "user@example.com"
+              }
+            ]
+          },
+          "response": [
+            {
+              "name": "get-1",
+              "status": "OK",
+              "code": 200,
+              "body": "{\"id\":\"\",\"pnr\":\"BHFY6E\",\"passengers\":[{\"id\":\"MCFBRFQ-\",\"firstName\":\"Estefanía\",\"lastName\":\"Vera Arroyo\",\"email\":\"email@travelx.io\",\"passengerType\":\"ADULT\",\"birthday\":\"1975-05-22\",\"documents\":[],\"gender\":\"MALE\",\"telephone\":[{\"number\":\"526678810355\"}]}],\"flights\":[{\"id\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"flightNo\":9294,\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-15T13:05:00\",\"arrivalDate\":\"2024-10-15T14:20:00\"}],\"payments\":[],\"itinerary\":{\"id\":\"\",\"providerItineraryId\":\"\",\"segments\":[{\"id\":\"ACAMEX-9294-20241015-Y4\",\"journeyKey\":\"VkJ_OTI5NH4gfn5OTFV_MDYvMTAvMjAyNCAxMzowNX5IVVh_MDYvMTAvMjAyNCAxNDoyMH5_\",\"legs\":[{\"id\":\"ACAMEX-373-20241029-Y4\",\"origin\":\"ACA\",\"destination\":\"MEX\",\"departureDate\":\"2024-10-29\",\"departureTime\":\"13:05\",\"arrivalDate\":\"2024-10-29\",\"arrivalTime\":\"14:20\",\"marketingCarrier\":\"Y4\",\"operatingCarrier\":\"Y4\",\"number\":373,\"equipmentType\":\"320\",\"cabin\":{\"designator\":\"A\",\"code\":\"Y\"},\"fareBase\":\"ALSO00N\",\"flightDuration\":\"PT1H15M\",\"seats\":[],\"familyFare\":\"\"}],\"timeBetweenLegs\":[],\"baggageInfo\":{\"holdBaggageList\":[],\"carryOnList\":[{\"quantity\":1,\"weight\":10,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"personalBagList\":[{\"quantity\":1,\"weight\":6,\"weightUnit\":\"Kg.\",\"dimension\":0,\"dimensionUnit\":\"Cm.\"}],\"specialBaggageList\":[]},\"extras\":[],\"flightDuration\":\"PT1H15M\",\"priceInfo\":{\"totalFare\":\"810.74\",\"tua\":\"309.28\",\"ancillariesTotal\":\"0.00\"}}],\"priceInfo\":{\"adults\":{\"totalFare\":\"491.03\",\"totalTax\":\"0.00\",\"baseFare\":\"491.03\",\"ptcTotal\":\"1120.02\",\"baseTax\":\"0.00\",\"quantity\":1,\"fareType\":\"PUB\",\"passengerType\":\"ADT\",\"extraTaxes\":[{\"amount\":\"810.74\",\"type\":\"BUNDLE\",\"code\":\"VLIG\"},{\"amount\":\"309.28\",\"type\":\"TUA Nacion\",\"code\":\"VTUA\"}]}],\"currency\":\"MXN\",\"createdAt\":\"2024-10-15T16:07:14.267269600Z\"},\"createdAt\":\"2024-10-15T16:07:14.267309757Z\",\"validatingCarrier\":\"Y4\",\"provider\":\"VOL\",\"flightType\":\"ONE_WAY\",\"isDomestic\":true,\"specialServices\":[]},\"contactInformation\":{\"phoneNumbers\":[{\"number\":\"+526678810355\",\"type\":1}],\"cultureCode\":\"es-MX\",\"emailAddress\":\"email@travelx.io\",\"name\":{\"first\":\"Estefanía\",\"last\":\"Vera Arroyo\"}}}",
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dynamic Inventory",
+      "item": [
+        {
+          "name": "Dynamic Inventory",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/flights/provider-cebu/dynamic-inventory/flights/{id}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "flights",
+                "provider-cebu",
+                "dynamic-inventory",
+                "flights",
+                "{id}"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "abcd1234"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "response": [
+            {
+              "name": "get-1",
+              "status": "OK",
+              "code": 200,
+              "body": "{\"id\":\"ACAGDL-1331-20241014-VOL\",\"capDate\":\"2024-10-14T10:00:00\",\"airlineCode\":\"VOL\",\"route\":\"ACAGLD\",\"leg\":\"ACAGLD\",\"legId\":\"ACAGDL-1331-20241014-VOL\",\"departureDate\":\"2024-10-14\",\"departureTime\":\"13:15\",\"flightNumber\":4344,\"totalCapacity\":154,\"totalLid\":180,\"totalFlightReservations\":180,\"authorizedSellSeats\":{\"A\":72,\"B\":74,\"C\":85,\"D\":90,\"E\":97,\"F\":106,\"G\":110,\"H\":119,\"I\":133,\"J\":135,\"K\":144,\"L\":148,\"M\":153,\"N\":160,\"O\":162,\"P\":167,\"Q\":173,\"R\":173,\"S\":176,\"T\":178,\"U\":180,\"V\":180,\"W\":59,\"Z\":45},\"bookingSeats\":{\"A\":8,\"B\":11,\"C\":1,\"D\":2,\"E\":5,\"F\":10,\"G\":12,\"H\":4,\"I\":13,\"J\":0,\"K\":4,\"L\":9,\"M\":10,\"N\":10,\"O\":1,\"P\":3,\"Q\":2,\"R\":4,\"S\":3,\"T\":1,\"U\":0,\"V\":0,\"W\":4,\"Z\":12},\"fare\":{\"bundle\":\"VZRO\",\"finalFareByClass\":{\"A\":1104,\"B\":1204,\"C\":1304,\"D\":1404,\"E\":1504,\"F\":1604,\"G\":1704,\"H\":1804,\"I\":1954,\"J\":2104,\"K\":2254,\"L\":2404,\"M\":2554,\"N\":2704,\"O\":2904,\"P\":3154,\"Q\":3454,\"R\":3754,\"S\":4054,\"T\":4404,\"U\":4704,\"V\":5304,\"W\":1004,\"Z\":853}},\"fares\":[{\"bundle\":\"VSMT\",\"finalFareByClass\":{\"A\":1766,\"B\":1866,\"C\":1966,\"D\":2066,\"E\":2166,\"F\":2266,\"G\":2366,\"H\":2466,\"I\":2616,\"J\":2766,\"K\":2916,\"L\":3066,\"M\":3216,\"N\":3366,\"O\":3566,\"P\":3816,\"Q\":4116,\"R\":4416,\"S\":4716,\"T\":5066,\"U\":5366,\"V\":5966,\"W\":1666,\"Z\":1514}},{\"bundle\":\"VLIG\",\"finalFareByClass\":{\"A\":1275,\"B\":1375,\"C\":1475,\"D\":1575,\"E\":1675,\"F\":1775,\"G\":1875,\"H\":1975,\"I\":2125,\"J\":2275,\"K\":2425,\"L\":2575,\"M\":2725,\"N\":2875,\"O\":3075,\"P\":3325,\"Q\":3625,\"R\":3925,\"S\":4225,\"T\":4575,\"U\":4875,\"V\":5475,\"W\":1175,\"Z\":1024}},{\"bundle\":\"VZRO\",\"finalFareByClass\":{\"A\":1104,\"B\":1204,\"C\":1304,\"D\":1404,\"E\":1504,\"F\":1604,\"G\":1704,\"H\":1804,\"I\":1954,\"J\":2104,\"K\":2254,\"L\":2404,\"M\":2554,\"N\":2704,\"O\":2904,\"P\":3154,\"Q\":3454,\"R\":3754,\"S\":4054,\"T\":4404,\"U\":4704,\"V\":5304,\"W\":1004,\"Z\":853}}],\"pacingCurve\":{\"type\":\"MC6P1\",\"remainingDaysToDeparture\":99},\"loadFactorCapacity\":90,\"taxes\":{\"details\":[{\"name\":\"TUA\",\"price\":{\"amount\":664.4,\"currency\":\"MXN\"}}]},\"isInternational\":false,\"currency\":\"MXN\"}",
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
